@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sequence"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.myapplication.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_friend"
+            app:destination="@id/friend" />
+    </fragment>
+    <fragment
+        android:id="@+id/friend"
+        android:name="com.example.myapplication.Friend"
+        android:label="fragment_friend"
+        tools:layout="@layout/fragment_friend" >
+        <action
+            android:id="@+id/action_friend_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_friend_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.myapplication.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settings_to_friend"
+            app:destination="@id/friend" />
+        <action
+            android:id="@+id/action_settings_to_play"
+            app:destination="@id/play" />
+    </fragment>
+    <fragment
+        android:id="@+id/itog"
+        android:name="com.example.myapplication.Itog"
+        android:label="fragment_itog"
+        tools:layout="@layout/fragment_itog" >
+        <action
+            android:id="@+id/action_itog_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/play"
+        android:name="com.example.myapplication.Play"
+        android:label="fragment_play"
+        tools:layout="@layout/fragment_play" >
+        <action
+            android:id="@+id/action_play_to_itog"
+            app:destination="@id/itog" />
+        <action
+            android:id="@+id/action_play_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_play_to_itog2"
+            app:destination="@id/itog2" />
+    </fragment>
+    <fragment
+        android:id="@+id/itog2"
+        android:name="com.example.myapplication.Itog2"
+        android:label="fragment_itog2"
+        tools:layout="@layout/fragment_itog2" >
+        <action
+            android:id="@+id/action_itog2_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+</navigation>
